@@ -1,49 +1,38 @@
-import random
 import turtle
-
-
-def check_click(x, y):
-  if turtle.distance(x, y) < 50:
-    return True
-
-
-def generate_random_color():
-  colors = ["red", "orange", "yellow", "green", "blue", "purple"]
-  return random.choice(colors)
-
+import random
 
 class RandomShape:
+    def __init__(self):
+        self.t = turtle.Turtle()
+        self.t.speed(1)
+        self.t.pensize(3)
 
-  def __init__(self):
-    self.t = turtle.Turtle()
+    def draw_random_shape(self):
+        shape = random.choice(["square", "circle", "triangle"])
+        self.t.penup()
+        randX = random.randint(-200, 200)
+        randY = random.randint(-200, 200)
+        self.t.goto(randX, randY)
+        self.t.pendown()
+        if shape == "square":
+            for i in range(4):
+                self.t.forward(100)
+                self.t.left(90)
+        elif shape == "circle":
+            self.t.circle(50)
+        elif shape == "triangle":
+            for i in range(3):
+                self.t.forward(100)
+                self.t.left(120)
 
-  def random_circle(self, x, y):
-    self.t.penup()
-    self.t.goto(x, y)
-    self.t.pendown()
-    self.t.fillcolor(generate_random_color())
-    self.t.begin_fill()
-    radius = random.randint(10, 100)
-    self.t.circle(radius)
-    self.t.end_fill()
+    def clear_screen(self, x, y):
+        self.t.clear()
+        self.draw_random_shape()
 
-  def clear_screen(self, x, y):
-    self.t.clear()
-
-
-# Пример использования класса
 rs = RandomShape()
 
-turtle.onscreenclick(rs.random_circle)
-turtle.onscreenclick(rs.clear_screen, 3)
+turtle.onscreenclick(rs.clear_screen, 1)
 
+rs.draw_random_shape()
 
-def __main__():
-  isRunning = True
-  while isRunning:
-    rs.random_circle(random.randint(-200, 200), random.randint(-200, 200))
-
-
-if __name__ == __main__():
-  __main__()
 turtle.mainloop()
