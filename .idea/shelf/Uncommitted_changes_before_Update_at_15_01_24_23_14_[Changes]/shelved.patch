@@ -1,0 +1,28 @@
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.8 (pythonProject)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (kb)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (kb)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/kb.iml
+===================================================================
+diff --git a/.idea/kb.iml b/.idea/kb.iml
+--- a/.idea/kb.iml	
++++ b/.idea/kb.iml	
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/venv" />
+     </content>
+-    <orderEntry type="jdk" jdkName="Python 3.10 (kb)" jdkType="Python SDK" />
++    <orderEntry type="jdk" jdkName="Python 3.11 (kb)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
